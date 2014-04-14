@@ -31,7 +31,7 @@ Field::Field()
 }
 
 void Field::onRightButtonPressed()
-{
+{/*
     for(int j = 2; j >= 0; --j)
     {
         for(int i = 0; i < 4; ++i)
@@ -53,9 +53,8 @@ void Field::onRightButtonPressed()
                 cell->setValue(0);
                 continue;
             }
-
         }
-    }
+    }*/
 }
 
 
