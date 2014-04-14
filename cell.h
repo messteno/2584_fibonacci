@@ -11,7 +11,7 @@ public:
     Cell(bool needGenerate);
     void setValue(int value);
     int getValue();
-    void draw(QPainter &painter, int position);
+    void draw(QPainter &painter, int size);
 };
 
 #endif // CELL_H

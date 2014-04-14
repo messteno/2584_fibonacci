@@ -1,14 +1,19 @@
 #ifndef FIELD_H
 #define FIELD_H
 
+#include <QWidget>
 #include "cell.h"
 
-class Field
+class Field : public QWidget
 {
 private:
     Cell *cells_[16];
+
+protected:
+    virtual void paintEvent(QPaintEvent *);
+
 public:
-    Field();
+    Field(QWidget *parent = 0);
     void onRightButtonPressed();
     void onDownButtonPressed();
     void onLeftButtonPressed();
@@ -16,7 +21,6 @@ public:
     bool isCellsConnectable(Cell *c1, Cell *c2);
     void connectCells(Cell *c1, Cell *c2);
     void generateCell();
-    void repaint();
 };
 
 #endif // FIELD_H
