@@ -17,6 +17,16 @@ int Cell::getValue()
     return value_;
 }
 
+void Cell::setUpdated(bool updated)
+{
+    updated_ = updated;
+}
+
+bool Cell::isUpdated()
+{
+    return updated_;
+}
+
 void Cell::draw(QPainter &painter, int size)
 {
     QRect rect = QRect(5, 5, size - 10, size - 10);
